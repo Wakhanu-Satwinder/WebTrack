@@ -1,0 +1,38 @@
+.row{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+         align-items: stretch;
+        width: 100%;
+        
+    }
+    .column{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%
+        flex:50%;
+        float: left;
+        margin: 60px 4%;
+        
+ }
+ .some-page-wrapper{
+    margin: 15px;
+   /* background-color: red;*/
+ }
+ @media screen and (min-width: 500px){
+    .column{
+        flex: 1
+    }
+    .double-column{
+        flex: 2
+    }
+ }
+ 
+ .bar{
+    float: left;
+    width: 50%;
+ }
+ .pie{
+    float: right;
+    width: 50%;
+ }
