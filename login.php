@@ -77,7 +77,7 @@ include('log.php');
         
             <div class="input-group" style="margin-bottom: 25px">
              <!--<label>Username:</label>-->
-                <input type="text" name="name" placeholder="Username" maxlength="25"  required>
+                <input class="form-control" type="text" name="name" placeholder="Username" maxlength="25"  required>
             </div>
 
             <div class="input-group" style="margin-bottom: 25px">
@@ -116,5 +116,24 @@ include('log.php');
                 <p style="color:white;">Copyright &copy; 2020 Web Track</p>
        </footer>
     </div>
+    <script src="js/jquery.min.js"></script>
+  <script>
+    $('.form-control').each(function () {
+      floatedLabel($(this));
+    });
+
+    $('.form-control').on('input', function () {
+      floatedLabel($(this));
+    });
+
+    function floatedLabel(input) {
+      var $field = input.closest('.form-group');
+      if (input.val()) {
+        $field.addClass('input-not-empty');
+      } else {
+        $field.removeClass('input-not-empty');
+      }
+    }
+  </script>
   </body>
 </html>
